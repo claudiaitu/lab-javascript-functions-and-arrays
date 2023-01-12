@@ -53,7 +53,9 @@ const numbers1 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(array){
 
-
+  if (array.length === 0) {
+    return null
+  }
   return sumNumbers(array) / array.length;
 }
 
@@ -63,6 +65,8 @@ const words1 = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart'
 function averageWordLength(arr) {
   let sum = 0;
   
+  if (arr.length === 0) {
+    return null; }
   
   const length = arr.map(word => word.length)
 
@@ -93,6 +97,9 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(arr) {
+
+  if (arr.length === 0) {
+    return null} 
   let uniqueChars = arr.filter(function(word, index){
     return arr.indexOf(word) === index;
   });
@@ -105,6 +112,9 @@ function uniquifyArray(arr) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(arr , word) {
+
+  if (arr.length === 0) {
+    return null }
   if (arr.includes(word)) {
   return true 
 }
